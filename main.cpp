@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 
     string pipeInput;
     while(getline(cin, pipeInput)) {
-        cout << pipeInput << endl;
+        cout << pipeInput << endl << flush;
         this_thread::sleep_for(chrono::milliseconds(delay_milliseconds));
     }
 
