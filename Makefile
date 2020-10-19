@@ -7,3 +7,8 @@ main: $(obj)
 .PHONY:
 clean:
 	rm *.o slow
+
+.PHONY:
+install: main
+	sudo chmod +x ./slow
+	sudo cp ./slow /usr/bin/slow
