@@ -15,3 +15,14 @@ I1018 11:51:00.261928       1 log.go:172] http: TLS handshake error from 192.168
 I1018 11:51:10.262008       1 log.go:172] http: TLS handshake error from 192.168.1.15:39530: EOF
 …
 ```
+
+### Installation
+```
+> make install
+g++ main.cpp -Wall -o slow
+sudo chmod +x ./slow
+[sudo] password for root:
+sudo cp ./slow /usr/bin/slow
+
+> slow
+```
