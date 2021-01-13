@@ -10,6 +10,10 @@ int main(int argc, char *argv[]) {
         cout << USAGE << endl;
         return 1;
     }
+    if (argc == 2 && (argv[1] == "--help" || argv[1] == "-h")) {
+        cout << USAGE << endl;
+        return 0;
+    }
 
     int delay_milliseconds = 250;
     if (argc == 2) {
