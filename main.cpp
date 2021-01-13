@@ -10,7 +10,9 @@ int main(int argc, char *argv[]) {
         cout << USAGE << endl;
         return 1;
     }
-    if (argc == 2 && (argv[1] == "--help" || argv[1] == "-h")) {
+
+    string argument = (string) argv[1];
+    if (argc == 2 && (argument == "--help" || argument == "-h")) {
         cout << USAGE << endl;
         return 0;
     }
