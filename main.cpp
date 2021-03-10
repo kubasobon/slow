@@ -6,20 +6,21 @@ using namespace std;
 const string USAGE = "Usage:\n\t<source> | slow [delay-milliseconds]";
 
 int main(int argc, char *argv[]) {
+    int delay_milliseconds = 250;
+
     if (argc > 2) {
         cout << USAGE << endl;
         return 1;
     }
 
-    string argument = (string) argv[1];
-    if (argc == 2 && (argument == "--help" || argument == "-h")) {
-        cout << USAGE << endl;
-        return 0;
-    }
-
-    int delay_milliseconds = 250;
     if (argc == 2) {
-         delay_milliseconds = stoi(argv[1]);
+        string argument = (string) argv[1];
+        if (argument == "--help" || argument == "-h") {
+            cout << USAGE << endl;
+            return 0;
+        }
+
+        delay_milliseconds = stoi(argv[1]);
     }
 
     string pipeInput;
