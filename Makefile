@@ -10,5 +10,5 @@ clean:
 
 .PHONY:
 install: main
-	sudo chmod +x ./slow
-	sudo cp ./slow /usr/bin/slow
+	chmod +x ./slow
+	cp ./slow ~/.local/bin/
